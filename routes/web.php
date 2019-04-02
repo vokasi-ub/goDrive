@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('category', 'CategoryController@index');
+
+Route::get('/edit/edit/', 'CategoryController@edit');
+
+Route::get('/hapus/destroy/', 'CategoryController@destroy');

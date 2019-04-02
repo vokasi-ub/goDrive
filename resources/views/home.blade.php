@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Dashboard</title>
+  <title>GoDrive | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -64,7 +64,7 @@
         <li><a href="/category"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>
       </ol>
-
+      
       <div class="box-tools">
         <div class="input-group input-group-sm" style="width: 150px;">
           <form action="{{ url('query') }}" method="GET">
@@ -87,6 +87,7 @@
           </div>
         </div>
       </div><br><br>
+     
     </section>
 
     <div class="box-body table-responsive no-padding">
@@ -126,7 +127,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">GoDrive Company</a>.</strong> All rights
     reserved.
   </footer>
 
