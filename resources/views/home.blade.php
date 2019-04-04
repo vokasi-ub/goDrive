@@ -110,9 +110,9 @@
                 <td> {{$li->id_customer}} </td>
                 <td> {{$li->id_pembimbing}}</td>
                 <td>
-				            <a href="/edit/edit/{{ $li->category_id }}">Edit</a>
+				            <a href="/edit/edit/{{ $li->id_jadwal }}">Edit</a>
 				|
-				            <a href="/hapus/destroy/{{ $li->category_id }}">Hapus</a>
+				            <a href="/hapus/destroy/{{ $li->id_jadwal }}">Hapus</a>
 			          </td>
             </tr>
             @endforeach

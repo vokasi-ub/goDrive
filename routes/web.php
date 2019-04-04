@@ -19,4 +19,6 @@ Route::get('category', 'CategoryController@index');
 
 Route::get('/edit/edit/', 'CategoryController@edit');
 
+Route::post('/datakategori/update','CategoryController@update');
+
 Route::get('/hapus/destroy/', 'CategoryController@destroy');

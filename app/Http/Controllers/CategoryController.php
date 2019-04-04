@@ -19,15 +19,19 @@ class CategoryController extends Controller
 
     public function edit()
     {
-        $categories = DB::table('table_category')->where('category_id',$category_id)->get();
+        $categories = DB::table('jadwal')->where('id_jadwal',$id_jadwal)->get();
         return view('master.edit',['categories' => $categories]);
     }
 
     public function update()
     {
-        DB::table('table_category')->where('category_id',$request->category_id)->update([
-            'category_name' => $request->category_name
-            
+        DB::table('jadwal')->where('id_jadwal',$request->id_jadwal)->update([
+            'id_jadwal' => $categories->id_jadwal,
+            'hari' => $categories->hari,
+            'tanggal' => $categories->tanggal,
+            'jam' => $categories->jam,
+            'id_customer' => $categories->id_customer,
+            'id_pembimbing' => $categories->id_pembimbing
                        
         ]);
             return redirect('category');
@@ -35,7 +39,7 @@ class CategoryController extends Controller
 
     public function destroy()
     {
-        DB::table('table_category')->where('category_id',$category_id)->delete();
+        DB::table('jadwal')->where('id_jadwal',$id_jadwal)->delete();
         return redirect('category');
     }
 
