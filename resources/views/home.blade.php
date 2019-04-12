@@ -65,33 +65,22 @@
         <li class="active">Dashboard</li>
       </ol>
       
-      <div class="box-tools">
-        <div class="input-group input-group-sm" style="width: 150px;">
-          <form action="{{ url('query') }}" method="GET">
-            <div class="box-body">
-              <div class="row">
-                <div class="col-xs-5">
-                  <div class="input-group">
-                    <div class="input-group-btn">
-                      <button type="submit" class="btn btn-danger">Cari</button>
-                    </div>
-                    <!-- /btn-group -->
-                      <input type="text" class="form-control" name="cari" placeholder="Search Data Kategori..">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-          <div class="input-group-btn">
-            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-          </div>
-        </div>
-      </div><br><br>
-     
     </section>
 
     <div class="box-body table-responsive no-padding">
-        <table style="margin-left:5%; padding:15px; cellpadding:15px;" border="3px Solid blue">
+        <div class="box-footer"> 
+        <form action="carijadwal" method="get" class="sidebar-form">
+          <div class="input-group">
+            <input type="text" name="cari" class="form-control" placeholder="Search..." value="{{ old('cari') }}">
+            <span class="input-group-btn">
+                <button type="submit" name="cari" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+            </span>
+          </div>
+        </form><br>
+        <button type="submit" class="btn btn-info pull-left"><a href="tambah">Insert Data</a></button>
+
+        <table class="table table-stripped">
             <tr>
                 <td> ID Jadwal </td>
                 <td> Hari </td>
@@ -117,6 +106,7 @@
             </tr>
             @endforeach
         </table>
+        </div>
     </div>
 
     @yield('content')
